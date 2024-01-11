@@ -24,6 +24,11 @@ jobs:
           title: 'New commit containing changes to server configs:'
 ```
 
+This is the result:
+
+![image](https://github.com/matt1432/discommit/assets/98562002/0e09a025-1659-4296-a565-377b318177d2)
+
+
 ## TODO
 
 - cachix builds
