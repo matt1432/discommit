@@ -18,7 +18,7 @@
       discommit = pkgs.buildNpmPackage {
         name = "discommit";
         src = ./.;
-        npmDepsHash = "sha256-/Ryhmg7phHHWniWQock95wAJz4TNYDDsLBEXcICz9ao=";
+        npmDepsHash = "sha256-C+6Gsffmc3hov+Ijx63g3+v3kN4AgKtcVy62k1bA/4E=";
         nativeBuildInputs = with pkgs; [
           typescript
           nodejs_20
