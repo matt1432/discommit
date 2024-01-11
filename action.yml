@@ -1,0 +1,23 @@
+name: 'Discommit'
+description: 'Send an embed of your latest commit to your discord server'
+author: 'Mathis H.'
+inputs:
+  discord_webhook:
+    description: ''
+  api_url:
+    description: 'Optional api URL in case you are not on github'
+    default: 'https://api.github.com/repos/$OWNER/$REPO/commits/$REF'
+  title:
+    description: 'The title of the embeds in Discord'
+runs:
+  using: 'composite'
+  steps:
+    - name: Setup-Nix
+      uses: https://github.com/cachix/install-nix-action@v24
+
+    - run : nix run ${GITHUB_ACTION_PATH}
+      shell: bash
+      env:
+        INPUT_DISCORD_WEBHOOK: ${{ inputs.discord_webhook }}
+        INPUT_API_URL: ${{ inputs.api_url }}
+        INPUT_TITLE: ${{ inputs.title }}
